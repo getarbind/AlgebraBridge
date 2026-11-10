@@ -23,6 +23,12 @@ python3 analytics/analyze.py analytics/sample_events.json
 
 Requires Node ≥ 18.18. The analytics script uses only the Python 3.9+ standard library.
 
+## GitHub Pages
+
+The GitHub Actions workflow in `.github/workflows/deploy.yml` publishes the committed `dist/` directory when changes are pushed to `main`, or when manually triggered. In the repository settings, choose **Settings → Pages → Build and deployment → Source → GitHub Actions**. The published URL will appear in the Pages settings and deployment workflow.
+
+The workflow publishes the existing static build; it does not rebuild the app. Regenerate and commit `dist/` whenever the app changes. GitHub Pages only hosts static files, so the optional Express telemetry collector must be hosted separately.
+
 ## What the student sees
 
 | Panel | Representation | Interaction |
